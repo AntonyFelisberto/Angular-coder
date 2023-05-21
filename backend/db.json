@@ -6,16 +6,6 @@
       "price": 1
     },
     {
-      "id": 2,
-      "name": "carro",
-      "price": 10000
-    },
-    {
-      "id": 3,
-      "name": "barra",
-      "price": 10000
-    },
-    {
       "id": 4,
       "name": "carta",
       "price": 30
@@ -24,16 +14,6 @@
       "name": "test",
       "price": 521,
       "id": 5
-    },
-    {
-      "id": 6,
-      "name": "arkham",
-      "price": 5547
-    },
-    {
-      "name": "asddd",
-      "price": 6,
-      "id": 7
     }
   ]
 }
