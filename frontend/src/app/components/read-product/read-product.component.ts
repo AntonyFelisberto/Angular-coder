@@ -12,7 +12,7 @@ import { ModeloSchamaticsDataSource } from '../modelo-schamatics/modelo-schamati
 export class ReadProductComponent implements OnInit{
 
   products!:Product[]
-  displayedColumns = ['id','name','price']
+  displayedColumns = ['id','name','price','action']
 
   constructor(private productService:ProductService){}
 
