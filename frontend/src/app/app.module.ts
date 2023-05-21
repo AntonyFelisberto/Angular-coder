@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,8 @@ import { ForDirective } from './diretives/for.directive';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 
 import {HttpClientModule} from '@angular/common/http'
+import {registerLocaleData} from '@angular/common'
+import localePt from '@angular/common/locales/pt'
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,6 +32,9 @@ import { ModeloSchamaticsComponent } from './components/modelo-schamatics/modelo
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
+
+registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
@@ -43,7 +48,8 @@ import { MatSortModule } from '@angular/material/sort';
     ForDirective,
     CreateProductComponent,
     ReadProductComponent,
-    ModeloSchamaticsComponent
+    ModeloSchamaticsComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,12 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue:'pt-br'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

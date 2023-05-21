@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTable } from '@angular/material/table';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product/product.service';
+import { ModeloSchamaticsDataSource } from '../modelo-schamatics/modelo-schamatics-datasource';
 
 @Component({
   selector: 'app-read-product',
@@ -10,6 +12,7 @@ import { ProductService } from 'src/app/services/product/product.service';
 export class ReadProductComponent implements OnInit{
 
   products!:Product[]
+  displayedColumns = ['id','name','price']
 
   constructor(private productService:ProductService){}
 
